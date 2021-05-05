@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  chatterbot:
+    image: chatter:latest
+    working_dir: "/app"
+    volumes:
+    - ".:/app"      
+    command: python3 -u main.py
+    ports:
+      - "8380:80"
+
